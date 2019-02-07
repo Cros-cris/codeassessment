@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/code','codeassessmentcontroller@index');
+
+Route::get('/code/create', 'codeassessmentcontroller@create');
+
+Route::post('/code', 'codeassessmentcontroller@store');
